@@ -1,0 +1,178 @@
+// -*- mode: jsonc; -*-
+{
+    // --- GENERAL ---
+    "layer": "top",
+    "position": "center",
+
+
+    // --- LEFT MODULES ---
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+
+    "hyprland/workspaces": {
+        "sort-by-name": true,
+        "format": "{id}",
+        "show-special": true,
+        "persistent_workspaces": {
+            "*": 10
+        }
+     },
+
+
+    // --- CENTER MODULES ---
+    "modules-center": ["clock"],
+
+    "clock": {
+        "interval": 1,
+        "format": " {:%I:%M %b %d}",
+	"timezone": "America/Los_Angeles",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "on-click-right": "mode",
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+    },
+
+
+    // --- RIGHT MODULES ---
+    "modules-right": ["network", "idle_inhibitor", "pulseaudio", "bluetooth", "cpu", "memory", "temperature", "backlight", "battery", "custom/updates", "custom/dunst", "tray", "custom/lock", "custom/power"],
+
+    "network": {
+        "format-wifi": "({signalStrength}%) ",
+        "tooltip-format-wifi": "{ifname}: {ipaddr}/{cidr}\n{essid} on {frequency}GHz",
+        "format-ethernet": "🖧",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "on-click": "nm-connection-editor"
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+    "pulseaudio": {
+        "format":                 "{volume}% {icon}",
+        "format-bluetooth":       "{volume}% ",
+        "format-bluetooth-muted": " ",
+        "format-muted":           " ",
+        "format-source":          "{volume}% ",
+        "format-source-muted":    "",
+        "format-icons": {
+            "headphone":  "",
+            "hands-free": "",
+            "headset":    "",
+            "phone":      "",
+            "portable":   "",
+            "car":        "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "bluetooth": {
+        "format": "on",
+        "format-off": "off",
+        "tooltip-format": "{status}",
+        "layer": "top",
+        "position": "top",
+        "modules-right": ["custom/bluetooth"],
+        "custom/bluetooth": {
+          "exec": "bluetoothctl show | grep 'Powered: yes' && echo '' || echo ''",
+          "interval": 10,
+          "tooltip": true,
+        },
+        "on-click": "blueman-manager"
+      },
+            
+      
+
+    "cpu": {
+        "interval": 10,
+        "format": "{usage}% ",
+        "on-click": "kitty btop"
+    },
+
+    "memory": {
+        "interval": 10,
+        "format": "{}% ",
+        "on-click": "kitty btop"
+    },
+
+    "temperature": {
+        "interval": 30,
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C ",
+        "on-click": "kitty btop"
+    },
+
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+
+    "battery": {
+        "interval": 5,
+        "full-at": 95,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰂄",
+        "format-plugged": "{capacity}% ",
+        "format-icons": ["󱃍", "󱃍", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰁹"],
+        "tooltip-format": "{capacity}%\n{timeTo}\n{power} W"
+    },
+
+    "custom/updates": {
+        "interval": 3600, // every hour
+        "exec": "~/.config/waybar/scripts/get_updates.sh",
+        "return-type": "json",
+        "exec-if": "exit 0",
+        "exec-on-event": false,
+        "on-click": "kitty sh -c ~/.config/waybar/scripts/update.sh",
+        "signal": 8,
+    },
+
+    "custom/dunst": {
+        "exec": "~/.config/waybar/scripts/dunst.sh",
+        "return-type": "json",
+        "on-click": "dunstctl set-paused toggle",
+    },
+
+    // ---
+
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10
+	"s
+    },
+
+    // ---
+
+    "custom/lock": {
+        "tooltip": false,
+        "on-click": "hyprlock",
+        "format": "",
+    },
+
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "wlogout",
+        "format": "⏻"
+    }
+}
