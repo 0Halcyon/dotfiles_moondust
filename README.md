@@ -4,6 +4,8 @@
 This directory contains my minimal personal dotfiles for my 
 Arch Linux & Hyprland based system.
 
+![Picture of monochrome themed desktop](pics/desktop.png)
+
 
 
 --- sys info ---
