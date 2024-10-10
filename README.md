@@ -1,15 +1,15 @@
 <h1>- MOONDUST DOTS -</h1>
 
-
-
-This directory contains my minimal personal dotfiles for my 
-Arch Linux & Hyprland based system.
-
 ____________________________________________________________________________________________________
 
 <img src="/pics/desktop.png" alt="Picture of monochome themed desktop" width="1000"/>
 
 ____________________________________________________________________________________________________
+
+
+
+This directory contains my minimal personal dotfiles for my 
+Arch Linux & Hyprland based system.
 
 --- sys info ---
 
