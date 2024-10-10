@@ -4,9 +4,11 @@
 This directory contains my minimal personal dotfiles for my 
 Arch Linux & Hyprland based system.
 
+____________________________________________________________________________________________________
+
 <img src="/pics/desktop.png" alt="Picture of monochome themed desktop" width="1000"/>
 
-
+____________________________________________________________________________________________________
 
 --- sys info ---
 
