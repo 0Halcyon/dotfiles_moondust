@@ -3,8 +3,7 @@
 
 This directory contains my minimal personal dotfiles for my 
 Arch Linux & Hyprland based system.
-
-![Picture of monochrome themed desktop](pics/desktop.png)
+<img src="/pics/desktop.png" alt="Picture of monochome themed desktop" width="200"/>
 
 
 
