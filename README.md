@@ -1,7 +1,9 @@
 --- moondust dots ---
 
 
-This directory contains my minimal personal dotfiles for my Arch Linux & Hyprland based system.
+This directory contains my minimal personal dotfiles for my 
+Arch Linux & Hyprland based system.
+
 
 
 --- sys info ---
