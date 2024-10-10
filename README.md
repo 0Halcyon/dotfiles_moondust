@@ -1,7 +1,7 @@
 --- moondust dots ---
 
 
-This directory contains my personal dotfiles for my Arch Linux & Hyprland based system.
+This directory contains my minimal personal dotfiles for my Arch Linux & Hyprland based system.
 
 
 --- sys info ---
@@ -9,7 +9,7 @@ This directory contains my personal dotfiles for my Arch Linux & Hyprland based 
 
 Distro - Arch
 Kernel - Linux
-WM - Hyprland - Wayland
+WM - Hyprland/Wayland
 Dashboard - HyprPanel
 Bar - Waybar/AGS
 
@@ -22,4 +22,13 @@ Bar - Waybar/AGS
 ~ zsh-syntax-highlighting
 ~ hyprland
 ~ waybar
-~ aylurs-gtk-widgets
+~ aylurs-gtk-widgets | AUR
+~ cava
+~ wlogout
+~ rofi
+~ hyprpanel
+~ btop
+~ hyprlock
+~ neofetch
+~ swww
+
