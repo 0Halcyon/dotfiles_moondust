@@ -1,5 +1,5 @@
-<h1>--- MOONDUST DOTS ---</h1>
-_
+<h1>- MOONDUST DOTS -</h1>
+
 
 
 This directory contains my minimal personal dotfiles for my 
