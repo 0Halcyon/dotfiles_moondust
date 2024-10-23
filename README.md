@@ -17,7 +17,6 @@ Arch Linux & Hyprland based system.
 Distro - Arch
 Kernel - Linux
 WM - Hyprland/Wayland
-Dashboard - HyprPanel
 Bar - Waybar/AGS
 
 
@@ -33,7 +32,6 @@ Bar - Waybar/AGS
 ~ cava
 ~ wlogout
 ~ rofi
-~ hyprpanel
 ~ btop
 ~ hyprlock
 ~ neofetch
