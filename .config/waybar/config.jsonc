@@ -5,7 +5,9 @@
     "height": 30,
     "spacing": 4,
     "modules-left": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "custom/border",
+        "hyprland/window"
     ],
     "modules-center": [
         "custom/archicon",
@@ -25,6 +27,11 @@
         "tray",
         "custom/power"
     ],
+
+    "custom/border": {
+        "format": "|"
+    },
+
     "custom/archicon": {
         "format": "\uf303",
         "tooltip": false
