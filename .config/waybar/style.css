@@ -56,6 +56,13 @@ tooltip {
 
 #power_profiles-daemon {
     margin-right: 10px;
+    
+}
+
+#custom-archicon {
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .modules-center {
@@ -78,3 +85,4 @@ tooltip {
     border-color: white;
     border-radius: 5;   
 }
+

@@ -5,12 +5,12 @@
     "height": 30,
     "spacing": 4,
     "modules-left": [
-        "custom/arch_logo",
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "clock",
-        "cava"
+        "custom/archicon",
+        "clock"
+        
     ],
     "modules-right": [
         "idle_inhibitor",
@@ -25,9 +25,9 @@
         "tray",
         "custom/power"
     ],
-    "custom/arch_logo": {
-        "format": "{icon}",
-        "format-icon": "\uf303"
+    "custom/archicon": {
+        "format": "\uf303",
+        "tooltip": false
     },
 
     "hyprland/window": {
