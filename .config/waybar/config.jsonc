@@ -1,0 +1,142 @@
+// Halcyon's minimal Waybar config
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    "modules-left": [
+        "custom/arch_logo",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock",
+        "cava"
+    ],
+    "modules-right": [
+        "idle_inhibitor",
+        "network",
+        "pulseaudio",
+        "temperature",
+        "cpu",
+        "memory",
+        "backlight",
+        "battery",
+        "power-profiles-daemon",
+        "tray",
+        "custom/power"
+    ],
+    "custom/arch_logo": {
+        "format": "{icon}",
+        "format-icon": "\uf303"
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "separate-outputs": true
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p - %B, %d}"
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon} ",
+        "format-alt-click": "click-right",
+        "format-icons": {
+            "activated": "\uf06e",
+            "deactivated": "\uf070"
+        },
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "{icon}{volume:4}%",
+        "format-bluetooth": "{volume:4}%",
+        "format-muted": "\uf466 {volume}%",
+        "format-icons": {
+            "headphone": ["\uf025", "\uf025", "\uf025", "\uf025"],
+            "default": ["\uf026", "\uf027", "\uf027", "\uf028"]
+        },
+        "scroll-step": 2,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+
+
+    "network": {
+        "format": "{icon}",
+        "format-alt": "{ipaddr}/{cidr}",
+        "format-alt-click": "click-right",
+        "format-wifi": "\udb81\udda9 ({signalStrength}%)",
+        "format-ethernet": "\udb80\ude00 ",
+        "format-disconnected": "\udb81\uddaa",
+        "on-click": "terminator -e networkmanager_dmenu",
+        "tooltip": true,
+        "tooltip-format": "{essid} ({signalStrength}%)"
+    },
+
+    "temperature": {
+        "format": "\uf2c9{temperatureC:3}°C",
+        "hwmon-path": "/sys/class/thermal/thermal_zone11/temp",
+        // "hwmon-path": "/sys/class/hwmon/hwmon7/temp1_input",
+        // "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input",
+        "on-click": "terminator -e 'watch -n1 sensors'"
+    },
+
+    "cpu": {
+        "format": "{icon} {usage}%",
+        "format-icons": "\uf4bc"
+    },
+
+    "memory": {
+        "format": "{icon} {percentage}%",
+        "format-icons": "\uefc5"
+    },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": "\udb80\udcde"
+    },
+
+    "battery": {
+        "states": {
+            // "good": 95, 
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% \udb80\udc84",
+        "format-plugged": "{capacity}% \ueb2d",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["\udb80\udc8e", "\udb80\udc7b", "\udb80\udc7d", "\udb80\udc80", "\udb80\udc79"]
+    },
+    
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+          "default": "",
+          "performance": "",
+          "balanced": "\uf24e",
+          "power-saver": "\uf06c"
+        }
+    },
+    
+    "custom/power": {
+        "format": "{icon}",
+        "format-icons": "\u23fb",
+        "tooltip": false,
+        "on-click": "wlogout"
+    },
+    
+    "tray": {
+        "icon-size": 20,
+        "spacing": 5
+    },
+
+    "stylesheet": "style.css"
+}
