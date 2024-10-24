@@ -24,10 +24,12 @@ tooltip {
 #workspaces button {
     padding: 0 5px;
     background: transparent;
-    color: white;
+    color: grey;
 }
 
-
+#workspaces button.active {
+    color: white;
+}
 
 #battery.charging {
     color: white;

@@ -6,7 +6,7 @@
     "spacing": 4,
     "modules-left": [
         "hyprland/workspaces",
-        "custom/border",
+        "custom/border1",
         "hyprland/window"
     ],
     "modules-center": [
@@ -24,17 +24,28 @@
         "backlight",
         "battery",
         "power-profiles-daemon",
+        "custom/border2",
         "tray",
+        "custom/border2",
         "custom/power"
     ],
 
-    "custom/border": {
+    "custom/border1": {
+        "format": "||"
+    },
+    
+    "custom/border2": {
         "format": "|"
     },
 
     "custom/archicon": {
         "format": "\uf303",
         "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format-active": "\uea71",
+        "format": "\uf4aa"
     },
 
     "hyprland/window": {
@@ -128,7 +139,7 @@
         "format-icons": {
           "default": "",
           "performance": "",
-          "balanced": "\uf24e",
+          "balanced": "\uf192",
           "power-saver": "\uf06c"
         }
     },
@@ -142,7 +153,7 @@
     
     "tray": {
         "icon-size": 20,
-        "spacing": 5
+        "spacing": 4
     },
 
     "stylesheet": "style.css"

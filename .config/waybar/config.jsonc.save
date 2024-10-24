@@ -37,6 +37,8 @@
         "tooltip": false
     },
 
+    "hyprlan
+
     "hyprland/window": {
         "format": "{title}",
         "separate-outputs": true
@@ -84,7 +86,7 @@
 
     "temperature": {
         "format": "\uf2c9{temperatureC:3}°C",
-        "hwmon-path": "/sys/claswcs/thermal/thermal_zone11/temp",
+        "hwmon-path": "/sys/class/thermal/thermal_zone11/temp",
         // "hwmon-path": "/sys/class/hwmon/hwmon7/temp1_input",
         // "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input",
         "on-click": "terminator -e 'watch -n1 sensors'"
